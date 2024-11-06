@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Outfit:wght@100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+:root {
+    --green-200-lighter: hsl(148, 38%, 91%);
+    --green-600-medium: hsl(169, 82%, 27%);
+    --red: hsl(0, 66%, 54%);
+    --white: hsl(0, 0%, 100%);
+    --grey-500-medium: hsl(186, 15%, 59%);
+    --grey-900-darker: hsl(187, 24%, 22%);
+}
+ 
+body {
+    font-size: 16px;
+    font-family: "Karla", sans-serif;
+    background-color: var(--green-200-lighter);
+    color: var(--grey-900-darker);
+}
+
+form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--white);
+    padding: 20px 30px;
+    min-width: 50%;
+}
+
+.title {
+    font-size: 1.5em;
+    font-weight: 700;
+    color: var(--grey-900-darker);
+}
+
+.name label, .message label {
+    display: block;
+}
+
+.name input, .email input, textarea {
+    height: 30px;
+    min-width: 100%;
+    padding: 0 10px;
+    font-size: 1em;
+    margin: 5px 0;
+    border-radius: 5px;
+    border: 1px solid var(--grey-500-medium);
+}:focus{
+    outline-color: var(--green-600-medium);
+}
+
+textarea {
+    height: 70px;
+    padding: 10px;
+}
+
+.names, .radios {
+    display: flex;
+    gap: 10px;
+    margin: 10px 0;
+    justify-content: space-between;
+}
+
+.name {
+    width: 100%;
+}
+
+.radios label {
+    height: 30px;
+    border: 1px solid;
+    padding: 5px;
+    min-width: 48%;
+    border-radius: 5px;
+    border: 1px solid var(--grey-500-medium);
+    accent-color: var(--green-600-medium);
+}:focus{
+    outline-color: var(--green-600-medium);
+}
+
+button {
+    width: 100%;
+    border: 0;
+    height: 40px;
+    border-radius: 20px;
+    background-color: var(--green-600-medium);
+    color: var(--white);
+}
+
+.email, .query-type, .message, .consent {
+    margin: 15px 0;
+}
+
+.message {
+    margin-top: 20px;
+}
+
+.consent {
+    accent-color: var(--green-600-medium);
+
+}
+
+.error {
+    color: var(--red);
+    font-size: 0.8em;
+    font-weight: 700;
+
+}
+
+@media screen and (max-width: 500px) {
+    form {
+        margin: 20px 0;
+        min-width: 90%;
+    }
+    .names, .radios {
+        flex-direction: column;
+    }
+}
+
+
+
